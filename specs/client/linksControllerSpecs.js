@@ -11,7 +11,9 @@ describe('LinksController', function () {
     // mock out our dependencies
     $rootScope = $injector.get('$rootScope');
     $httpBackend = $injector.get('$httpBackend');
+    //console.log("before");
     Links = $injector.get('Links');
+    //console.log("after");
     $scope = $rootScope.$new();
 
     var $controller = $injector.get('$controller');
