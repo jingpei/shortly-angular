@@ -2,6 +2,7 @@ body {
   margin: 0;
   margin-top: 10px;
   font-family: arial, sans-serif;
+  overflow: hidden;
 }
 
 a {
@@ -69,8 +70,9 @@ h1 {
   width: 500px;
   margin: auto;
   margin-top: 10px;
-  height: 50%;
+  height: 700px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .linkContainer {
