@@ -33,8 +33,12 @@ h1 {
   padding: 0px 10px;
 }
 
-.shortlyInput:focus, .shortlybutton:focus {
+.shortlyInput:focus, .shortlyButton:focus {
   outline: none;
+}
+
+.shortlyButton:hover {
+  background-color: rgb(105, 177, 187);
 }
 
 .shortlyButton {
@@ -63,7 +67,7 @@ h1 {
 }
 
 .link-header .shortlyButton {
-  left: 45%;
+  left: 44%;
 }
 
 .linksContainer {
