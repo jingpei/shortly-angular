@@ -1,6 +1,6 @@
 <div id='container'>
   <!-- Your html here -->
   <ul>
-    <li ng-repeat='link in data.links'>{{ link.base_url + "/" + link.code }}</li>
+    <li ng-repeat='link in data.links'><a href='{{link.base_url + "/" + link.code}}'>{{ link }}</a></li>
   </ul>
 </div>

@@ -26,6 +26,13 @@ angular.module('shortly', [
     .when('/', {
       templateUrl: 'app/links/links.html',
       controller: 'LinksController'
+    })
+    .otherwise({
+      redirectTo: function(routeParams, path){
+        console.log(routeParams);
+        console.log(path);
+        return "/links";
+      }
     });
 
     // Your code here
