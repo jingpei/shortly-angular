@@ -36,6 +36,17 @@ angular.module('shortly.services', [])
         });
       });
     }
+  };
+})
+.factory('Code', function ($http, $location, $window, $q) {
+  return {
+    GET: function(data){
+      return $http({
+        headers: {'Access-Control-Allow-Origin': true},
+        method: 'GET',
+        url: '/api/links/' + data
+      });
+    }
   }
 })
 .factory('Auth', function ($http, $location, $window) {

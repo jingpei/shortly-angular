@@ -5,11 +5,11 @@ angular.module('shortly.links', [])
   $scope.data = {};
   $scope.getLinks = function () {
     //var result = Links;
-    Links.GET().then(function (data) {
+    Links.GET()
+    .then(function (data) {
       //console.log(data);
       $scope.data.links = data;
-      }
-    );
+    });
   };
 
   $scope.getLinks();

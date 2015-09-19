@@ -3,9 +3,10 @@ angular.module('shortly', [
   'shortly.links',
   'shortly.shorten',
   'shortly.auth',
+  'shortly.code',
   'ngRoute'
 ])
-.config(function ($routeProvider, $httpProvider) {
+.config(function ($routeProvider, $locationProvider, $httpProvider) {
   $routeProvider
     .when('/signin', {
       templateUrl: 'app/auth/signin.html',
@@ -27,13 +28,22 @@ angular.module('shortly', [
       templateUrl: 'app/links/links.html',
       controller: 'LinksController'
     })
-    .otherwise({
-      redirectTo: function(routeParams, path){
-        console.log(routeParams);
-        console.log(path);
-        return "/links";
-      }
+    .when('/:code', {
+      templateUrl: 'app/links/links.html',
+      controller: 'CodeController'
+      // redirectTo: function ($routeParams) {
+      //   console.log($routeParams);
+      //   console.log('/api/links' + $routeParams);
+      //   return "/api/links/" + $routeParams.code;
     });
+
+    // .when('/:id/:code' {
+    //   redirectTo: function (routeParams, path) {
+    //     console.log(routeParams);
+    //     console.log(path);
+    //     return "/links";
+    //   }
+    // });
 
     // Your code here
 
