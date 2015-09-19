@@ -1,6 +1,21 @@
 <div id='container'>
   <!-- Your html here -->
-  <ul>
+<!--   <ul>
     <li ng-repeat='link in data.links'><a href='{{link.base_url + "/#/" + link.code}}'>{{ link }}</a></li>
-  </ul>
+  </ul> -->
+
+  <div class="link-header">
+     <a href="#/shorten"><button class="shortlyButton">shortly</button></a>
+  </div>
+  
+  <div class="linksContainer">
+    <a href='{{ link.base_url + "/api/links/" + link.code }}' ng-repeat='link in data.links'>
+      <div class="linkContainer">
+        <p>{{ link.visits }}</p>
+        <p>{{ link.base_url + "/api/links/" + link.code }}</p>
+        <p>{{ link.url }}</p>
+        <!-- <a href='{{ link.base_url + "/#/" + link.code }}'>{{ link.url }}</a> -->
+      </div>
+    </a>
+  </div>  
 </div>

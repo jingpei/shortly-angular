@@ -11,6 +11,7 @@ angular.module('shortly.shorten', [])
       function () {
         //console.log("You sent us a link to shorten: " + url);
         $scope.link.url = '';
+        $location.path('/links');
       }
     );
   };

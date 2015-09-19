@@ -51,7 +51,41 @@ h1 {
   position: absolute;
 }
 
+.link-header {
+  position: relative;
+  height:90px;
+  top: 0;
+  border-bottom: 1px solid lightgrey;
+  margin: 0;
+  padding: 0;
+  box-shadow: 3px 2px 3px lightgrey;
+}
 
+.link-header .shortlyButton {
+  left: 45%;
+}
+
+.linksContainer {
+  width: 500px;
+  margin: auto;
+  margin-top: 10px;
+  height: 50%;
+  overflow-y: scroll;
+}
+
+.linkContainer {
+  padding: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.linkContainer p:first-child {
+  float: right;
+}
+
+.linkContainer:hover, a:hover {
+  background-color: #AAD3D8;
+  color: white;
+}
 
 .navigation {
   width: 100%;
