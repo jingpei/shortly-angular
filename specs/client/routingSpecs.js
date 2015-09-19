@@ -12,19 +12,19 @@ describe('Routing', function () {
     expect($route.routes['/signup'].templateUrl).to.be('app/auth/signup.html');
   });
 
-  xit('Should have /signin route, template, and controller', function () {
+  it('Should have /signin route, template, and controller', function () {
     expect($route.routes['/signin']).to.be.ok();
     expect($route.routes['/signin'].controller).to.be('AuthController');
     expect($route.routes['/signin'].templateUrl).to.be('app/auth/signin.html');
   });
 
-  xit('Should have /links route, template, and controller', function () {
+  it('Should have /links route, template, and controller', function () {
     expect($route.routes['/links']).to.be.ok();
     expect($route.routes['/links'].controller).to.be('LinksController');
     expect($route.routes['/links'].templateUrl).to.be('app/links/links.html');
   });
 
-  xit('Should have /shorten route, template, and controller', function () {
+  it('Should have /shorten route, template, and controller', function () {
     expect($route.routes['/shorten']).to.be.ok();
     expect($route.routes['/shorten'].controller).to.be('ShortenController');
     expect($route.routes['/shorten'].templateUrl).to.be('app/shorten/shorten.html');

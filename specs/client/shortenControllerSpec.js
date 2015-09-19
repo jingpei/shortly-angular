@@ -1,4 +1,4 @@
-xdescribe('ShortenController', function () {
+describe('ShortenController', function () {
   var $scope, $rootScope, $location, createController, $httpBackend, Links;
 
   // using angular mocks, we can inject the injector
@@ -38,11 +38,13 @@ xdescribe('ShortenController', function () {
 
   it('should have a addLink method on the $scope', function () {
     expect($scope.addLink).to.be.a('function');
+    //console.log("should havd addlink method test passed.");
   });
 
   it('should be able to create new links with addLink()', function () {
     $httpBackend.expectPOST("/api/links").respond(201, '');
     $scope.addLink();
     $httpBackend.flush();
+    //console.log("should be able to create new links test passed.");
   });
 });

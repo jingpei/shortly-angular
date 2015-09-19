@@ -2,21 +2,41 @@ angular.module('shortly.services', [])
 
 .factory('Links', function ($http, $q) {
   // Your code here
-  console.log("You made it to get links!");
-  return $q(function(resolve, reject){
-    $http({
-      method: 'GET',
-      url: '/api/links',
-    })
-    .then(function(resp){
-      if(resp){
-        resolve(resp.data)
-      } else{
-        reject("YOU SUCK");
-      }
-    });
-  });
-
+  //console.log("You made it to get links!");
+  return {
+    GET: function () {
+      return $q(function (resolve, reject) {
+        $http({
+          method: 'GET',
+          url: '/api/links'
+        })
+        .then(function (resp) {
+          if (resp) {
+            resolve(resp.data);
+          } else {
+            reject("YOU SUCK");
+          }
+        });
+      });
+    },
+    POST: function (data) {
+      console.log("Data to post: " + data);
+      return $q(function (resolve, reject) {
+        $http({
+          method: 'POST',
+          url: '/api/links',
+          data: {url: data}
+        })
+        .then(function (resp) {
+          if (resp) {
+            resolve(resp.data);
+          } else {
+            reject("YOU SUCK");
+          }
+        });
+      });
+    }
+  }
 })
 .factory('Auth', function ($http, $location, $window) {
   // Don't touch this Auth service!!!
